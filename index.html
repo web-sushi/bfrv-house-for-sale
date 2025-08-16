@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to your Humble Abode!</title>
+
+    <!-- Bootstrap CSS/JS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Sawarabi Mincho (already used) + Noto Sans JP (you reference it in CSS) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (you use <i class="bi ..."> in footer) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <section class="top-intro" id="top-intro">
+      <div class="container top">
+        <h1 class="name">Your <strong>Future Home</strong> Awaits You</h1>
+        <h3 class="name-title">
+          A spacious family home in Las Piñas City, blending comfort, style, and
+          convenience.
+        </h3>
+      </div>
+    </section>
+
+    <section
+      class="hero-intro d-flex justify-content-center align-items-center text-center pb-4 intro"
+      id="intro"
+    >
+      <div class="px-4 text-center">
+        <h2 class="display-4 fw-bold" id="greeting"><br />House Information</h2>
+        <div class="col-lg-8 mx-auto text-start">
+          <br />
+          <p class="lead mb-4">
+            <strong>📍 Address:</strong> B30 L32 G. Dee Sekiat St., Corner
+            Sunpointe Drive, BF Resort Village, Las Piñas City
+          </p>
+
+          <p class="lead mb-2">
+            <strong>🏠 Lot Area:</strong> 154 sqm + 177 sqm = <b>331 sqm</b>
+          </p>
+          <p class="lead mb-2"><strong>🏡 House Area:</strong> 240 sqm ++</p>
+          <p class="lead mb-4">
+            <strong>💰 Price:</strong>
+            <span class="text-danger fw-bold"
+              >₱17,000,000 (Rush Price - Negotiable)</span
+            ><br />
+            <small>₱48,000/sqm (₱15,880,000 based on lot area)</small>
+          </p>
+
+          <h4 class="fw-bold mt-4">🗂 House Layout</h4>
+          <ul class="list-unstyled lead">
+            <li>
+              <strong>1st Floor:</strong> Living Room, Dining Room, 2 Kitchens
+              (Main & Dirty), 2 Restrooms, Maid’s Room
+            </li>
+            <br />
+            <li>
+              <strong>2nd Floor:</strong> Master Bedroom (with Veranda, Vanity
+              Room, Bathroom), 2 Bedrooms (each with Bathroom), 1 Office Room
+            </li>
+            <br />
+            <li><strong>Garage:</strong> Fits 2–3 cars</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="property-gallery py-5"
+      id="gallery"
+      aria-label="Photo gallery of the property"
+    >
+      <div class="container text-center">
+        <h2
+          class="mb-4 fw-bold"
+          style="font-family: 'Sawarabi Mincho', serif; color: #2e2e2e"
+        >
+          📸 House Gallery
+        </h2>
+
+        <div
+          id="houseCarousel"
+          class="carousel slide carousel-fade mx-auto"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+          data-bs-pause="hover"
+          data-bs-touch="true"
+          aria-roledescription="carousel"
+          aria-label="House photos"
+          style="max-width: 900px"
+        >
+          <!-- Indicators (auto-filled by script below) -->
+          <div class="carousel-indicators"></div>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <!-- Exterior -->
+            <div class="carousel-item active">
+              <img
+                src="./images/exterior/outside.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Front view of the house from the street"
+                fetchpriority="high"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>Exterior: Front View</h5>
+                <p>Spacious frontage with welcoming facade</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/exterior/garage.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Garage and driveway fitting two to three cars"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>Exterior: Garage</h5>
+                <p>Fits 2 to 3 cars</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/exterior/backyard-1.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Backyard with open green space"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>Exterior: Backyard</h5>
+                <p>Open space for family activities</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/exterior/backyard-2.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Second angle of the backyard"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>Exterior: Backyard</h5>
+                <p>Additional backyard view</p>
+              </div>
+            </div>
+
+            <!-- Interior 1F -->
+            <div class="carousel-item">
+              <img
+                src="./images/1f/living-room.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Living room with windows and seating"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>1st Floor: Living Room</h5>
+                <p>Bright and spacious living space</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/1f/dining-room-1.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Dining room view one"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>1st Floor: Dining Room</h5>
+                <p>Ideal for family gatherings</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/1f/dining-room-2.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Dining room view two"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>1st Floor: Dining Room</h5>
+                <p>Additional dining room view</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/1f/restroom.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="First-floor restroom"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>1st Floor: Restroom</h5>
+                <p>Main restroom for 1st floor</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/1f/stairs.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Stairs from 1st floor leading up"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>1st Floor: Stairs</h5>
+                <p>Wide stairs for easy movement</p>
+              </div>
+            </div>
+
+            <!-- Interior 2F (12 slides) -->
+            <!-- Master Bedroom (4) -->
+            <div class="carousel-item">
+              <img
+                src="./images/2f/master-bedroom.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Master bedroom with large window and bed"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Master Bedroom</h5>
+                <p>Spacious master suite with natural light</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/2f/master-vanity.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Master vanity room with built-in storage and mirror"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Master Vanity</h5>
+                <p>Dedicated vanity room with storage</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/2f/master-bathroom.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Master bathroom with sink, toilet, and shower area"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Master Bathroom</h5>
+                <p>Ensuite bathroom for the master bedroom</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/2f/master-veranda.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Master bedroom veranda overlooking backyard"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Master Veranda</h5>
+                <p>Private outdoor space for fresh air</p>
+              </div>
+            </div>
+
+            <!-- Bedroom 1 (2) -->
+            <div class="carousel-item">
+              <img
+                src="./images/2f/bedroom-1.jpg"
+                class="d-block w-100 rounded shadow"
+                alt="Second-floor Bedroom 1 with window and closet"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Bedroom 1</h5>
+                <p>Bright room ideal for kids or guests</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/2f/bedroom-1-bath.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Bedroom 1 ensuite bathroom"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Bedroom 1 Bathroom</h5>
+                <p>Private bathroom attached to Bedroom 1</p>
+              </div>
+            </div>
+
+            <!-- Bedroom 2 (3) -->
+            <div class="carousel-item">
+              <img
+                src="./images/2f/bedroom-2.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Second-floor Bedroom 2 with window and neutral palette"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Bedroom 2</h5>
+                <p>Comfortable secondary bedroom</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/2f/bedroom-2-bath-1.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Bedroom 2 bathroom, first angle"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Bedroom 2 Bathroom</h5>
+                <p>Clean, functional bathroom (view 1)</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/2f/bedroom-2-bath-2.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Bedroom 2 bathroom, second angle"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Bedroom 2 Bathroom</h5>
+                <p>Additional angle (view 2)</p>
+              </div>
+            </div>
+
+            <!-- Hall + Office + Stairs (3) -->
+            <div class="carousel-item">
+              <img
+                src="./images/2f/hall.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Second-floor hallway connecting rooms"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Hallway</h5>
+                <p>Central corridor connecting rooms</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/2f/office-room.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Second-floor office room with desk area"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Office Room</h5>
+                <p>Quiet workspace or study area</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/2f/stairs-up.jpeg"
+                class="d-block w-100 rounded shadow"
+                alt="Stairs leading from first floor to second floor"
+                loading="lazy"
+                decoding="async"
+                style="max-height: 70vh; object-fit: cover"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
+              >
+                <h5>2nd Floor: Stairway</h5>
+                <p>Wide stairs for easy movement</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#houseCarousel"
+            data-bs-slide="prev"
+            aria-label="Previous slide"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#houseCarousel"
+            data-bs-slide="next"
+            aria-label="Next slide"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <p class="text-muted small mt-2">Use ◀︎▶︎ keys or swipe to navigate</p>
+      </div>
+    </section>
+
+    <!-- Auto-generate indicators based on slide count -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const carousel = document.getElementById("houseCarousel");
+        if (!carousel) return;
+        const items = carousel.querySelectorAll(".carousel-item");
+        const indicators = carousel.querySelector(".carousel-indicators");
+        if (!indicators) return;
+
+        indicators.innerHTML = "";
+        items.forEach((_, i) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.setAttribute("data-bs-target", "#houseCarousel");
+          btn.setAttribute("data-bs-slide-to", i);
+          if (i === 0) btn.classList.add("active");
+          btn.setAttribute("aria-label", `Go to slide ${i + 1}`);
+          indicators.appendChild(btn);
+        });
+      });
+    </script>
+
+    <section
+      class="nearby-essentials bg-light py-5"
+      id="nearby"
+      aria-label="Nearby shops, schools, and services"
+    >
+      <div class="container">
+        <h2
+          class="mb-4 fw-bold text-center"
+          style="font-family: 'Sawarabi Mincho', serif; color: #2e2e2e"
+        >
+          🏙 Nearby Essentials
+        </h2>
+        <p class="text-center text-muted mb-5">
+          Conveniently located near malls, schools, hospitals, and shops.
+        </p>
+
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+          <!-- Grocery -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-basket2-fill fs-3 text-primary"></i>
+                  <h3 class="h5 mb-0">Groceries</h3>
+                </div>
+                <ul class="list-unstyled small mb-3">
+                  <li>
+                    <a
+                      href="https://goo.gl/maps/vSZ7UkTj24HjJwoA6"
+                      target="_blank"
+                      >Robinsons Easymart – BF Resort</a
+                    >
+                    <span class="text-muted">(~2 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/yJzATgdgXfoQi6kZ6"
+                      target="_blank"
+                      >Seoul-a-Mart (Korean Store)</a
+                    >
+                    <span class="text-muted">(~3 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/ZzsPnJoq8Knmv5WW6"
+                      target="_blank"
+                      >DALI Everyday Grocery</a
+                    >
+                    <span class="text-muted">(~3 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/HxEYutTahkEYeVi57"
+                      target="_blank"
+                      >Dae Nong Mart</a
+                    >
+                    <span class="text-muted">(~4 min)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Malls -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-bag-fill fs-3 text-primary"></i>
+                  <h3 class="h5 mb-0">Malls</h3>
+                </div>
+                <ul class="list-unstyled small mb-3">
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/SM+Center+Las+Pi%C3%B1as"
+                      target="_blank"
+                      >SM Center Las Piñas</a
+                    >
+                    <span class="text-muted">(~7 min drive)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/Vista+Mall+Las+Pi%C3%B1as"
+                      target="_blank"
+                      >Vista Mall Las Piñas</a
+                    >
+                    <span class="text-muted">(~8 min drive)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/Robinsons+Place+Las+Pi%C3%B1as"
+                      target="_blank"
+                      >Robinsons Las Piñas</a
+                    >
+                    <span class="text-muted">(~10 min drive)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/SM+Southmall"
+                      target="_blank"
+                      >SM Southmall</a
+                    >
+                    <span class="text-muted">(~12 min drive)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/Alabang+Town+Center"
+                      target="_blank"
+                      >Alabang Town Center</a
+                    >
+                    <span class="text-muted">(~15 min drive)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurants -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-cup-straw fs-3 text-primary"></i>
+                  <h3 class="h5 mb-0">Restaurants & Cafés</h3>
+                </div>
+                <ul class="list-unstyled small mb-3">
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/SdRk9zZMATk71Wqx7"
+                      target="_blank"
+                      >Tablo Kitchen x Café</a
+                    >
+                    <span class="text-muted">(~2 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/5oT4UFdbgJEAdVoE6"
+                      target="_blank"
+                      >GWON Korean Grill</a
+                    >
+                    <span class="text-muted">(~2 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/tjJhLwPhmAioLTxq9"
+                      target="_blank"
+                      >VEN AQUI Kitchen | Café</a
+                    >
+                    <span class="text-muted">(~2 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/hwVHmtoPAbnvSyTv5"
+                      target="_blank"
+                      >Tibatib Restaurant</a
+                    >
+                    <span class="text-muted">(~3 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/yE89CY5bRa7pBS128"
+                      target="_blank"
+                      >WagyuNiku</a
+                    >
+                    <span class="text-muted">(~3 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/X2KSzEhQH9MsT3517"
+                      target="_blank"
+                      >70's Kimchi - BFRV</a
+                    >
+                    <span class="text-muted">(~3 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/1umeBmustJu4aU8t8"
+                      target="_blank"
+                      >KAIJO Steaks & Ramen</a
+                    >
+                    <span class="text-muted">(~4 min)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hospitals -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-hospital fs-3 text-primary"></i>
+                  <h3 class="h5 mb-0">Hospitals</h3>
+                </div>
+                <ul class="list-unstyled small mb-3">
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/19NFD8ncDXezftzw5"
+                      target="_blank"
+                      >Perpetual Help Medical Center</a
+                    >
+                    <span class="text-muted">(~6 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/yQprxHGHdp6i8kFh7"
+                      target="_blank"
+                      >Las Piñas Doctors Hospital</a
+                    >
+                    <span class="text-muted">(~9 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://goo.gl/maps/Yn4UVRnn2CSdZYuE6"
+                      target="_blank"
+                      >Las Piñas Medical Center</a
+                    >
+                    <span class="text-muted">(~10 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://goo.gl/maps/dTWxPgn7dnwJ2oFs9"
+                      target="_blank"
+                      >Pope John Paul II Medical Center</a
+                    >
+                    <span class="text-muted">(~12 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://goo.gl/maps/WfQttfxdpwmQyowN9"
+                      target="_blank"
+                      >Christ the King Medical Center</a
+                    >
+                    <span class="text-muted">(~18 min)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schools -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-mortarboard fs-3 text-primary"></i>
+                  <h3 class="h5 mb-0">Schools</h3>
+                </div>
+                <ul class="list-unstyled small mb-3">
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/Augustinian+Abbey+School"
+                      target="_blank"
+                      >Augustinian Abbey School</a
+                    >
+                    <span class="text-muted">(~3 min drive)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/Las+Pinas+Science+High+School"
+                      target="_blank"
+                      >Las Piñas Science High School</a
+                    >
+                    <span class="text-muted">(~5 min drive)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/Westfield+Science+Oriented+School+and+Colleges"
+                      target="_blank"
+                      >Westfield Science School</a
+                    >
+                    <span class="text-muted">(~4 min drive)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/keEBX1GHttiHbmWf7"
+                      target="_blank"
+                      >Elizabeth Seton School</a
+                    >
+                    <span class="text-muted">(~3 min drive)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/University+of+Perpetual+Help+System+DALTA,+Las+Pi%C3%B1as+Campus"
+                      target="_blank"
+                      >University of Perpetual Help DALTA</a
+                    >
+                    <span class="text-muted">(~6 min drive)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/Southville+International+School+and+Colleges+(SISC)"
+                      target="_blank"
+                      >Southville Int’l School & Colleges</a
+                    >
+                    <span class="text-muted">(~8 min drive)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- City Services (fills the 6th slot) -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-geo-alt-fill fs-3 text-primary"></i>
+                  <h3 class="h5 mb-0">City Services</h3>
+                </div>
+                <ul class="list-unstyled small mb-3">
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Las+Pi%C3%B1as+City+Hall"
+                      target="_blank"
+                      rel="noopener"
+                      >Las Piñas City Hall</a
+                    >
+                    <span class="text-muted">(~10–12 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Barangay+BF+Resort+Village+Hall"
+                      target="_blank"
+                      rel="noopener"
+                      >Barangay BF Resort Village Hall</a
+                    >
+                    <span class="text-muted">(~3–5 min)</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Police+station+near+BF+Resort+Village"
+                      target="_blank"
+                      rel="noopener"
+                      >Nearby Police Station</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Fire+station+near+BF+Resort+Village"
+                      target="_blank"
+                      rel="noopener"
+                      >Nearby Fire Station</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=ATMs+near+BF+Resort+Village"
+                      target="_blank"
+                      rel="noopener"
+                      >ATMs nearby</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-muted small mt-4 mb-0">
+          Tap a name to open it in Google Maps. Drive times are approximate,
+          typical traffic.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="contact-property bg-light"
+      id="contact"
+      aria-label="Contact to inquire or schedule a viewing"
+    >
+      <div class="container px-4 py-5">
+        <h2
+          class="pb-2 d-flex justify-content-center fw-bold"
+          style="font-family: 'Sawarabi Mincho', serif"
+        >
+          Contact & Schedule a Viewing
+        </h2>
+
+        <div class="row row-cols-1 row-cols-lg-2 align-items-start g-5 py-4">
+          <!-- Left: Viewing Form -->
+          <div class="col">
+            <div class="p-4 border rounded-4 bg-white shadow-sm">
+              <h4 class="fw-semibold mb-3">Request a Viewing</h4>
+
+              <form id="viewingForm" onsubmit="return false;">
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input
+                      id="name"
+                      type="text"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      class="form-control"
+                      placeholder="+63XXXXXXXXXX"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      id="email"
+                      type="email"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="date" class="form-label">Preferred Date</label>
+                    <input id="date" type="date" class="form-control" />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="time" class="form-label">Preferred Time</label>
+                    <input id="time" type="time" class="form-control" />
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="form-control"
+                      placeholder="I'd like to schedule a viewing. I'm available on..."
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12 d-grid d-md-flex gap-2 mt-2">
+                    <button
+                      id="sendEmailBtn"
+                      class="btn btn-primary btn-lg"
+                      type="button"
+                    >
+                      Send via Email
+                    </button>
+                    <button
+                      id="sendMessengerBtn"
+                      class="btn btn-outline-primary btn-lg"
+                      type="button"
+                    >
+                      Messenger
+                    </button>
+                    <button
+                      id="sendMessengerWebBtn"
+                      class="btn btn-outline-secondary btn-lg"
+                      type="button"
+                    >
+                      Messenger (Web)
+                    </button>
+                    <a
+                      id="openFbProfileBtn"
+                      class="btn btn-light btn-lg"
+                      target="_blank"
+                      rel="noopener"
+                      href="https://www.facebook.com/atsushijr.harada"
+                      >Open Facebook Profile</a
+                    >
+                  </div>
+
+                  <p
+                    id="helperText"
+                    class="text-muted small mt-2 mb-0"
+                    aria-live="polite"
+                  >
+                    Tip: We’ll copy your message first. If Messenger doesn’t
+                    open, use “Messenger (Web)” or “Open Facebook Profile”.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right: Address + Key Info -->
+          <div class="col d-flex flex-column gap-3">
+            <div class="p-3 border rounded-3 bg-white">
+              <div class="d-flex align-items-start gap-2">
+                <span class="badge text-bg-secondary">Address</span>
+                <div>
+                  <div class="fw-semibold">
+                    B30 L32 G. Dee Sekiat St., Corner Sunpointe Drive,<br />
+                    BF Resort Village, Las Piñas City
+                  </div>
+                  <a
+                    class="small text-decoration-none"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://maps.app.goo.gl/19NFD8ncDXezftzw5"
+                  >
+                    Open in Google Maps →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <ul class="list-unstyled small text-muted mb-0">
+              <li>
+                • Price: <strong>₱17,000,000</strong> (Rush Price - Negotiable)
+              </li>
+              <li>• Lot: <strong>331 m²</strong> (154 + 177)</li>
+              <li>• Floor Area: <strong>240 m²</strong></li>
+              <li>
+                • 1F: Living, Dining, 2 Kitchens, 2 Restrooms, Maid’s Room
+              </li>
+              <li>
+                • 2F: Master Suite (Veranda, Vanity, Bath), 2 Bedrooms w/ Baths,
+                Office
+              </li>
+              <li>• Garage: Fits 2 to 3 cars</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const EMAIL_TO = "atsushijunior.harada@gmail.com";
+        const MESSENGER_APP = "https://m.me/atsushijr.harada"; // mobile-friendly
+        const MESSENGER_WEB = "https://www.messenger.com/t/atsushijr.harada"; // desktop web
+        const helper = document.getElementById("helperText");
+
+        function getFormValues() {
+          const name = document.getElementById("name")?.value.trim() || "";
+          const phone = document.getElementById("phone")?.value.trim() || "";
+          const email = document.getElementById("email")?.value.trim() || "";
+          const date = document.getElementById("date")?.value || "";
+          const time = document.getElementById("time")?.value || "";
+          const msg = document.getElementById("message")?.value.trim() || "";
+
+          const lines = [
+            "Viewing Request – BF Resort Village House",
+            "",
+            `Name: ${name || "—"}`,
+            `Phone: ${phone || "—"}`,
+            `Email: ${email || "—"}`,
+            `Preferred: ${[date, time].filter(Boolean).join(" ") || "—"}`,
+            "",
+            msg ? `Message:\n${msg}` : "Message: —",
+          ];
+          return {
+            subject: "Inquiry / Viewing Request – BF Resort Village House",
+            body: lines.join("\n"),
+          };
+        }
+
+        async function copyToClipboard(text) {
+          try {
+            await navigator.clipboard.writeText(text);
+            helper.textContent =
+              "Message copied. If Messenger opens, just paste and send.";
+          } catch {
+            helper.textContent =
+              "Couldn’t auto-copy. Messenger will open; please copy the message manually.";
+          }
+        }
+
+        function openInNewTab(url) {
+          const w = window.open(url, "_blank", "noopener");
+          if (!w) {
+            // popup blocked; fallback to same tab
+            window.location.href = url;
+          }
+        }
+
+        document
+          .getElementById("sendEmailBtn")
+          .addEventListener("click", () => {
+            const { subject, body } = getFormValues();
+            const mailto = `mailto:${encodeURIComponent(
+              EMAIL_TO
+            )}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+              body
+            )}`;
+            window.location.href = mailto;
+          });
+
+        document
+          .getElementById("sendMessengerBtn")
+          .addEventListener("click", async () => {
+            const { body } = getFormValues();
+            await copyToClipboard(body);
+            openInNewTab(MESSENGER_APP); // tries m.me first (best on mobile)
+          });
+
+        document
+          .getElementById("sendMessengerWebBtn")
+          .addEventListener("click", async () => {
+            const { body } = getFormValues();
+            await copyToClipboard(body);
+            openInNewTab(MESSENGER_WEB); // direct to web messenger thread
+          });
+      })();
+    </script>
+
+    <section class="footer-sect bg-dark text-light mt-5">
+      <div class="container">
+        <footer class="py-4">
+          <!-- Navigation links -->
+          <ul
+            class="nav justify-content-center border-bottom border-secondary pb-3 mb-3"
+          >
+            <li class="nav-item">
+              <a href="#top-intro" class="nav-link px-2 text-light">Top</a>
+            </li>
+            <li class="nav-item">
+              <a href="#intro" class="nav-link px-2 text-light">House Info</a>
+            </li>
+            <li class="nav-item">
+              <a href="#gallery" class="nav-link px-2 text-light">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="#nearby" class="nav-link px-2 text-light">Nearby Essentials</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link px-2 text-light">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Contact shortcuts -->
+          <div class="d-flex justify-content-center gap-4 mb-3">
+            <a
+              href="mailto:atsushijunior.harada@gmail.com"
+              class="text-light text-decoration-none d-flex align-items-center gap-2"
+            >
+              <i class="bi bi-envelope-fill"></i> Email
+            </a>
+            <a
+              href="https://m.me/atsushijr.harada"
+              target="_blank"
+              rel="noopener"
+              class="text-light text-decoration-none d-flex align-items-center gap-2"
+            >
+              <i class="bi bi-messenger"></i> Messenger
+            </a>
+          </div>
+
+          <!-- Copyright -->
+          <p class="text-center mb-0 small text-secondary">
+            © 2025 BF Resort Village House Listing – Atsushi Junior Harada
+          </p>
+        </footer>
+      </div>
+    </section>
+
+    <button
+      id="backToTop"
+      type="button"
+      class="btn btn-primary rounded-pill shadow"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      ↑ Top
+    </button>
+    <script>
+      (function () {
+        const btn = document.getElementById("backToTop");
+        if (!btn) return;
+
+        const SHOW_AT = 300; // px scrolled before showing
+
+        function onScroll() {
+          if (window.scrollY > SHOW_AT) {
+            btn.classList.add("show");
+          } else {
+            btn.classList.remove("show");
+          }
+        }
+
+        function toTop() {
+          // Respect reduced motion
+          const prefersReduced = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches;
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: prefersReduced ? "auto" : "smooth",
+          });
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        btn.addEventListener("click", toTop);
+
+        // Init on load
+        onScroll();
+      })();
+    </script>
+  </body>
+</html>

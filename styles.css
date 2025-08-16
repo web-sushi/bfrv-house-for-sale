@@ -1,0 +1,242 @@
+/* Base reset */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Smooth scroll (disabled if user prefers reduced motion) */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Back to Top button */
+#backToTop {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.25rem;
+  z-index: 1050;            /* above most content */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+
+/* HERO (top) */
+.top-intro {
+  background:
+    linear-gradient(180deg,
+      rgba(42,183,202,.35) 0%,
+      rgba(145,229,246,.55) 60%,
+      rgba(0,0,0,.12) 100%
+    ),
+    url("./images/exterior/garage.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.95;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.name {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  color: #fffbde;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.name-title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* fixed: was 'weight' (invalid) */
+  color: #d0e3f0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* House Information section */
+#greeting {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+#greeting-text {
+  color: #708090;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.intro {
+  background: linear-gradient(to right, #dbe9f4, #f0f0f0);
+}
+
+/* Links */
+a.text-primary:hover {
+  color: #0d6efd;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+/* (Legacy project styles kept but unused; safe to delete if not needed) */
+#project-head {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.project-text-wrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #f1f1f1;
+}
+
+.project-text-wrapper:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tindog-icon, .hikari-icon {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+#tindog-head, #hikari-head {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  color: #fff8e7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.tindog-text, .hikari-text {
+  color: #e0e0e0;
+  font-family: "Noto Sans JP", sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+#tindog-link, #hikari-link {
+  color: #fff8e7;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+a.icon-link:hover {
+  color: #fff8e7;
+  text-decoration: underline;
+}
+
+.project-sample {
+  background: url("./images/city-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.95;
+}
+
+/* Gallery / Carousel */
+.interest-hobby { /* legacy section; safe to delete */
+  background: linear-gradient(to right, #dbe9f4, #f0f0f0);
+}
+
+.hobby-img { /* legacy image class; safe to delete */
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 0.3rem;
+  border-radius: 12px;
+  color: #f1f1f1;
+}
+.carousel-caption h5 {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 1.5rem;
+  color: #fff8e7;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+.carousel-caption p {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Contact */
+.contact-me { /* legacy; not used now */
+  background: url("./images/temple.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.95;
+}
+
+.contact-head {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.contact-text {
+  color: #333; /* improved contrast on white cards */
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.contact-text-wrapper {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.feature-icon-small {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-text-wrapper:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.foot-text {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* (Optional) Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .carousel,
+  .carousel * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
